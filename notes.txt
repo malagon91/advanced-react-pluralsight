@@ -1,0 +1,3 @@
+server is the main file for web server
+
+on windows install nodemon and on linux mac install pm2
