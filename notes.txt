@@ -1,3 +1,11 @@
 server is the main file for web server
 
 on windows install nodemon and on linux mac install pm2
+
+script to run 
+
+windows nodemon lib/server.js
+linux mac pm2 start lib/server.js --watch
+// pm2 start lib/server.js --interpreter babel-node
+
+"webpack": "webpack -wd"  -w (watch) d development mode
