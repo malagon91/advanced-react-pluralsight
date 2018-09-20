@@ -10,7 +10,8 @@
     "babel-eslint": "7.2.3",
     "eslint": "3.19.0",
     "eslint-plugin-react": "6.10.3",
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "react-test-renderer": "15.5.4"
   },
   "scripts": {
     "dev": "nodemon --exec babel-node lib/server.js",
