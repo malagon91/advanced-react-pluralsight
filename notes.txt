@@ -9,3 +9,17 @@ linux mac pm2 start lib/server.js --watch
 // pm2 start lib/server.js --interpreter babel-node
 
 "webpack": "webpack -wd"  -w (watch) d development mode
+
+build out node app to leave to use babel 
+"build-node": "babel lib -d build --copy-files"
+compile 
+compile all files in lib directory in a build folder
+
+--copy-files (copy all node files)
+
+ // "stage-2"
+ remove this from package 
+ "start-prod": "set NODE_ENV=production NODE_PATH=./lib&& nodemon --exec babel-node lib/server.js -i max --name AppProd"
+ to run app in production 
+ all node run by default in one cpu but if we add "-i max" run the app in all of cpu cores 
+ 

@@ -18,15 +18,22 @@
   "scripts": {
     "dev": "set NODE_PATH=./lib&& nodemon --exec babel-node lib/server.js",
     "webpack": "webpack -wd",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "verify-test": "jest --coverage",
+    "build-webpack": "webpack -p",
+    "build-node": "babel lib -d build --copy-files",
+    "start-prod": "set NODE_ENV=production NODE_PATH=./lib&& nodemon --exec babel-node lib/server.js -i max --name AppProd"
   },
   "babel": {
     "presets": [
       "react",
-      "env",
-      "stage-2"
+      ["env",{"targets":{ "node": "current"} }]
     ]
   },
+  "plugins":[
+    "transform-class-properties",
+    "transform-object-rest-spread"
+  ],
   "dependencies": {
     "axios": "0.16.2",
     "babel-cli": "6.24.1",
